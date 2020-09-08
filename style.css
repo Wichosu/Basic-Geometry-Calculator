@@ -1,0 +1,130 @@
+html, body {
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main, .sub {
+  text-align: center;
+}
+
+.figures {
+  width: 800px;
+  display: -ms-grid;
+  display: grid;
+  margin: 80px auto 0px auto;
+  justify-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+}
+
+.figures__square {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+.figures__rectangle {
+  width: 200px;
+  height: 100px;
+  background-color: black;
+}
+
+.figures__circle {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.figures__triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid black;
+}
+
+.figures__diamond {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 70px solid black;
+  position: relative;
+  top: -60px;
+}
+
+.figures__diamond:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 70px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 70px solid black;
+}
+
+.figures__trapeze {
+  width: 200px;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid black;
+}
+
+.figures--selectable {
+  -webkit-transition: ease 300ms;
+  transition: ease 300ms;
+}
+
+.figures--selectable:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.remove {
+  width: 0;
+  height: 0;
+  border-width: 0;
+  visibility: hidden;
+}
+
+.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.input {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px auto;
+}
+
+.input__children {
+  margin: 0px 10px;
+}
+
+.button {
+  width: 100px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  visibility: hidden;
+  display: block;
+  margin: 50px auto;
+}
+/*# sourceMappingURL=style.css.map */

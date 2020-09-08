@@ -1,0 +1,114 @@
+html, body{
+  margin: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.main, .sub{
+  text-align: center;
+}
+
+.figures{
+  width: 800px;
+  display: grid;
+  margin: 80px auto 0px auto;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+}
+
+.square{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+.rectangle{
+  width: 200px;
+  height: 100px;
+  background-color: black;
+}
+
+.circle{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.triangle{
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid black;
+}
+
+.diamond{
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 70px solid black;
+  position: relative;
+  top: -60px;
+}
+
+.diamond:after{
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 70px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 70px solid black;
+}
+
+.trapeze{
+  width: 200px;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid black;
+}
+
+.selectable{
+  transition: ease 300ms;
+}
+
+.selectable:hover{
+  cursor: pointer;
+  transform: translateY(-10px);
+}
+
+.remove{
+  width: 0;
+  height: 0;
+  border-width: 0;
+  visibility: hidden;
+}
+
+.centered{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.input{
+  width: 100px;
+  align-self: center;
+  visibility: hidden;
+  display: flex;
+  margin: 50px auto;
+}
+
+.button{
+  width: 100px;
+  align-self: center;
+  visibility: hidden;
+  display: block;
+  margin: 50px auto;
+}

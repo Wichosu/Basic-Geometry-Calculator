@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Geometry Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="main">Geometry Calculator</h1>
+  <h4 class="sub" id="instructions">Choose a figure</h4>
+  <section class="figures">
+    <div class="figures__square figures--selectable"></div>
+    <div class="figures__rectangle figures--selectable"></div>
+    <div class="figures__circle figures--selectable"></div>
+    <div class="figures__triangle figures--selectable"></div>
+    <div class="figures__diamond figures--selectable"></div>
+    <div class="figures__trapeze figures--selectable"></div>
+  </section>
+  <div class="input">
+    <input type="number" placeholder="" id="width" class="input__children">
+    <input type="number" placeholder="" id="height" class="input__children">
+    <input type="number" placeholder="" id="base" class="input__children">
+  </div>
+  <input type="button" value="Calculate" id="button" class="button">
+  <input type="button" value="Go Back" id="back" class="button">
+  <script src="script.js"></script>
+</body>
+</html>
